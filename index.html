@@ -4,49 +4,102 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Merka Menga Minimarket</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-white text-gray-800 font-sans">
 
-  <header class="main-header">
-    <img src="img/merkamenga-logo.png" alt="Logo Merka Menga" />
-    <h1>Merka Menga Minimarket</h1>
-    <p>¡Más que víveres, una experiencia de compra!</p>
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <div class="flex items-center space-x-2">
+        <img src="merkamenga-logo.png" alt="Logo Merka Menga" class="w-24 h-24 border border-red-500" />
+        <h1 class="text-2xl font-bold text-red-600">Merka Menga</h1>
+      </div>
+      <nav class="space-x-4 hidden md:flex">
+        <a href="#inicio" class="text-green-600 hover:text-red-600">Inicio</a>
+        <a href="#nosotros" class="text-green-600 hover:text-red-600">Nosotros</a>
+        <a href="#ofertas" class="text-green-600 hover:text-red-600">Ofertas</a>
+        <a href="#ubicacion" class="text-green-600 hover:text-red-600">Ubicación</a>
+        <a href="#contacto" class="text-green-600 hover:text-red-600">Contacto</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section class="info">
-      <h2>¿Quiénes somos?</h2>
-      <p>Merka Menga es tu minimarket de confianza, ofreciendo productos frescos, víveres, licores y mucho más. ¡Contamos con una app de escaneo exclusiva para facilitar tus compras!</p>
-    </section>
+  <!-- Hero Section -->
+  <section id="inicio" class="bg-green-100 text-center py-12 px-4">
+    <h2 class="text-4xl font-bold text-red-600 mb-4">¡Bienvenidos a Merka Menga!</h2>
+    <p class="text-lg text-gray-700">Calidad y economía en un solo lugar.</p>
+    <a href="#ofertas" class="mt-6 inline-block bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition">Ver Promociones</a>
+  </section>
 
-    <section class="horarios">
-      <h2>Horarios de Atención</h2>
-      <ul>
-        <li>Lunes a Viernes: 6:30 AM - 9:30 PM</li>
-        <li>Domingos: 7:00 AM - 2:00 PM y 4:00 PM - 9:00 PM</li>
-      </ul>
-    </section>
+  <!-- Nosotros -->
+  <section id="nosotros" class="py-12 bg-white px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h3 class="text-3xl font-bold text-green-600 mb-4">Sobre Nosotros</h3>
+      <p class="text-gray-700 leading-relaxed">
+        Somos un minimarket comprometido con tu bienestar. En Merka Menga, encontrarás productos frescos, precios accesibles y un servicio cercano y confiable.
+      </p>
+    </div>
+  </section>
 
-    <section class="galeria">
-      <h2>Galería</h2>
-      <div class="imagenes">
-        <img src="img/local1.jpg" alt="Foto del local 1" />
-        <img src="img/local2.jpg" alt="Foto del local 2" />
+  <!-- Ofertas -->
+  <section id="ofertas" class="py-12 bg-gray-50 px-4">
+    <div class="max-w-6xl mx-auto">
+      <h3 class="text-3xl font-bold text-red-600 mb-8 text-center">Ofertas Destacadas</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <!-- Producto -->
+        <div class="bg-white shadow rounded-xl p-4 text-center">
+          <img src="producto1.jpg" alt="arroz-pre.png" class="w-full h-40 object-cover mb-4 rounded-lg" />
+          <h4 class="text-lg font-semibold">Arroz Premium Sombrerudo</h4>
+          <p class="text-green-600 font-bold">$2.100 x libra</p>
+          <button class="mt-2 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Agregar</button>
+        </div>
+        <!-- Puedes copiar y pegar más productos aquí -->
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="ubicacion">
-      <h2>¿Dónde estamos?</h2>
-      <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </section>
-  </main>
+  <!-- Ubicación -->
+  <section id="ubicacion" class="py-12 bg-gray-100 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h3 class="text-3xl font-bold text-red-600 mb-6">¿Dónde estamos?</h3>
+      <p class="mb-4 text-gray-700">Encuéntranos fácilmente en nuestra sede principal.</p>
+      <div class="w-full h-96 rounded-xl overflow-hidden shadow-md">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.8956725568694!2d-76.5319261!3d3.4888052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a90061721ed3%3A0xb3383e8bbd7f1f1a!2sMerka%20Menga!5e0!3m2!1ses-419!2sco!4v1691962903246!5m2!1ses-419!2sco"
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
 
-  <footer class="footer">
-    <a class="whatsapp" href="https://wa.me/573001112233" target="_blank">📱 Escríbenos por WhatsApp</a>
-    <p>&copy; 2025 Merka Menga Minimarket</p>
+  <!-- Contacto -->
+  <section id="contacto" class="bg-white py-12 px-4">
+    <div class="max-w-3xl mx-auto">
+      <h3 class="text-3xl font-bold text-green-600 mb-4 text-center">Contáctanos</h3>
+      <form class="grid gap-4">
+        <input type="text" placeholder="Nombre" class="border p-3 rounded" required />
+        <input type="email" placeholder="Correo electrónico" class="border p-3 rounded" required />
+        <textarea placeholder="Tu mensaje" rows="5" class="border p-3 rounded" required></textarea>
+        <button type="submit" class="bg-red-600 text-white py-2 px-6 rounded hover:bg-red-700">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-200 text-center py-4 text-sm text-gray-600">
+    © 2025 Merka Menga Minimarket. Todos los derechos reservados.
   </footer>
+
+  <!-- Botón de WhatsApp -->
+  <a href="https://wa.me/573025541131" target="_blank"
+     class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg transition-all"
+     aria-label="Chatea por WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-white" viewBox="0 0 24 24">
+      <path d="M20.52 3.48A11.92 11.92 0 0012 0C5.37 0 .04 5.33.04 11.94c0 2.11.55 4.17 1.59 5.97L0 24l6.28-1.65A11.88 11.88 0 0012 24c6.63 0 12-5.37 12-12 0-3.21-1.26-6.23-3.48-8.52zm-8.52 19.04c-1.9 0-3.75-.5-5.38-1.45l-.38-.23-3.73.98.98-3.63-.25-.39c-.9-1.52-1.37-3.26-1.37-5.03 0-5.52 4.48-10 10-10s10 4.48 10 10-4.48 10-10 10zm5.48-7.75c-.3-.15-1.8-.89-2.08-.98-.28-.1-.49-.15-.7.15-.2.3-.8.98-.98 1.18-.2.2-.36.23-.67.08-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.52-1.78-1.7-2.08-.17-.3-.02-.47.13-.62.13-.13.3-.33.45-.5.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.53-.07-.15-.7-1.68-.95-2.3-.25-.6-.5-.52-.7-.52-.17 0-.37 0-.57.02-.2.02-.53.07-.8.37s-1.05 1.03-1.05 2.52c0 1.48 1.08 2.92 1.23 3.13.15.2 2.12 3.23 5.15 4.53.72.31 1.28.5 1.72.64.72.23 1.37.2 1.88.12.58-.08 1.8-.73 2.05-1.44.26-.72.26-1.34.18-1.44-.1-.1-.28-.16-.57-.3z"/>
+    </svg>
+  </a>
 
 </body>
 </html>
