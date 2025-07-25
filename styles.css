@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+}
+header {
+    background-color: #d32f2f;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+section {
+    padding: 1.5em;
+    background-color: white;
+    margin: 1em auto;
+    width: 90%;
+    max-width: 900px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.galeria img {
+    width: 48%;
+    margin: 1%;
+    border-radius: 8px;
+}
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+.whatsapp {
+    display: inline-block;
+    margin-bottom: 0.5em;
+    background: #25d366;
+    color: white;
+    padding: 0.7em 1.5em;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
